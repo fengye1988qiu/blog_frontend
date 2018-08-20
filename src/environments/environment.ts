@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   domain: 'http://127.0.0.1:7001/'
+  // domain: 'https://api.yaffa.top/'
 };
 
 /*
