@@ -2,12 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ArticleComponent } from './article/article.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { ArticleModule } from './article/article.module';
 
 @NgModule({
-  declarations: [AppComponent, ArticleComponent],
-  imports: [BrowserModule, NgbModule.forRoot(), HttpClientModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, NgbModule.forRoot(), HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,3 +1,37 @@
-<p>
-  article works!
-</p>
+<div class="row">
+  <h1>Article</h1>
+  <main class="col-md-8">
+    <article *ngFor="let article of articles" class="post post-1">
+      <header class="entry-header">
+        <h1 class="entry-title">
+          <a href="single.html">{{ article.title }}</a>
+        </h1>
+        <div class="entry-meta">
+          <span class="post-category">
+            <a href="#">{{ article.type }}</a>
+          </span>
+
+          <span class="post-date">
+            <a href="#">
+              <time class="entry-date">{{ article.createdAt | date: 'longDate' }}</time>
+            </a>
+          </span>
+
+          <span class="post-author">
+            <a href="#">{{ article.author }}</a>
+          </span>
+
+          <span class="comments-link">
+            <a href="#">{{ article.comments || 0 }}</a>
+          </span>
+        </div>
+      </header>
+      <div class="entry-content clearfix">
+        <p>{{ article.content }}</p>
+        <div class="read-more cl-effect-14">
+          <a href="#" class="more-link">Continue reading <span class="meta-nav">→</span> </a>
+        </div>
+      </div>
+    </article>
+  </main>
+</div>
